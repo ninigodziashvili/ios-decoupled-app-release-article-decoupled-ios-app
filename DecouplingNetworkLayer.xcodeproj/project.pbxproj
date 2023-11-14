@@ -18,11 +18,9 @@
 		AC0AD023287A2C7F00469864 /* DogFactDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD022287A2C7F00469864 /* DogFactDTO.swift */; };
 		AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD027287A328B00469864 /* DogFactsEnvironment.swift */; };
 		AC0AD02A287A32C700469864 /* DogFactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD029287A32C700469864 /* DogFactsAPI.swift */; };
-		AC0AD030287A3FEC00469864 /* DogFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */; };
 		AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6102287A1773006AEFD0 /* AppDelegate.swift */; };
 		AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */; };
 		AC0B610C287A1776006AEFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0B610B287A1776006AEFD0 /* Assets.xcassets */; };
-		AC0B610F287A1776006AEFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */; };
 		AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6118287A1819006AEFD0 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +36,10 @@
 		AC0AD022287A2C7F00469864 /* DogFactDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactDTO.swift; sourceTree = "<group>"; };
 		AC0AD027287A328B00469864 /* DogFactsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsEnvironment.swift; sourceTree = "<group>"; };
 		AC0AD029287A32C700469864 /* DogFactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsAPI.swift; sourceTree = "<group>"; };
-		AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsViewModel.swift; sourceTree = "<group>"; };
 		AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplingNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B6102287A1773006AEFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC0B610B287A1776006AEFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC0B610E287A1776006AEFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC0B6110287A1776006AEFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0B6118287A1819006AEFD0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +66,6 @@
 		4C6555872B038941003A26F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */,
 				4C65558D2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift */,
 			);
 			path = ViewModel;
@@ -79,7 +74,6 @@
 		4C6555882B038956003A26F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */,
 				4C65558B2B0396AA003A26F0 /* ContentView.swift */,
 			);
 			path = View;
@@ -246,7 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0B610F287A1776006AEFD0 /* LaunchScreen.storyboard in Resources */,
 				AC0B610C287A1776006AEFD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +261,6 @@
 				4C65558E2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift in Sources */,
 				AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */,
-				AC0AD030287A3FEC00469864 /* DogFactsViewModel.swift in Sources */,
 				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
@@ -277,17 +269,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC0B610E287A1776006AEFD0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC0B6111287A1776006AEFD0 /* Debug */ = {
