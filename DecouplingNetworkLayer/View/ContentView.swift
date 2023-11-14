@@ -1,8 +1,26 @@
-//
-//  ContentView.swift
-//  DecouplingNetworkLayer
-//
-//  Created by MacintoshHD on 11/14/23.
-//
+import SwiftUI
 
-import Foundation
+struct ContentView: View {
+    @StateObject private var viewModel = DogFactsSwiftUIViewModel(repository: DogFactsRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
+    
+    var body: some View {
+        VStack {
+            Text(viewModel.factMessage?.factMessage ?? "")
+                .padding()
+            
+            Button("Fetch Another Fact") {
+                viewModel.fetchRandomFact()
+            }
+            .padding()
+            
+            if !viewModel.errorMessage.isEmpty {
+                Text("Error: \(viewModel.errorMessage)")
+                    .foregroundColor(.red)
+                    .padding()
+            }
+        }
+        .onAppear {
+            viewModel.fetchRandomFact()
+        }
+    }
+}

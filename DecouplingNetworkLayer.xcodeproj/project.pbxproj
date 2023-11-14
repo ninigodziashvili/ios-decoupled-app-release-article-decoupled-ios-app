@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558B2B0396AA003A26F0 /* ContentView.swift */; };
+		4C65558E2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558D2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift */; };
+		4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */; };
 		AC0AD017287A1DA100469864 /* DogFactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD016287A1DA100469864 /* DogFactError.swift */; };
 		AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD018287A1DC700469864 /* DogFactData.swift */; };
 		AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD01C287A1E4900469864 /* URLSessionHTTPClient.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C65558B2B0396AA003A26F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C65558D2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsSwiftUIViewModel.swift; sourceTree = "<group>"; };
+		4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplingNetworkLayerApp.swift; sourceTree = "<group>"; };
 		AC0AD016287A1DA100469864 /* DogFactError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactError.swift; sourceTree = "<group>"; };
 		AC0AD018287A1DC700469864 /* DogFactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactData.swift; sourceTree = "<group>"; };
 		AC0AD01C287A1E4900469864 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */,
+				4C65558D2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -79,6 +86,7 @@
 				AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */,
 				AC0B6108287A1773006AEFD0 /* Main.storyboard */,
 				AC0B6106287A1773006AEFD0 /* ViewController.swift */,
+				4C65558B2B0396AA003A26F0 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,6 +96,7 @@
 			children = (
 				AC0B6102287A1773006AEFD0 /* AppDelegate.swift */,
 				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
+				4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -258,14 +267,17 @@
 			files = (
 				AC0B6107287A1773006AEFD0 /* ViewController.swift in Sources */,
 				AC0AD017287A1DA100469864 /* DogFactError.swift in Sources */,
+				4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */,
 				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* DogFactDTO.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DogFactsRemoteRepository.swift in Sources */,
 				AC0AD02A287A32C700469864 /* DogFactsAPI.swift in Sources */,
+				4C65558E2B0396E2003A26F0 /* DogFactsSwiftUIViewModel.swift in Sources */,
 				AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */,
 				AC0AD030287A3FEC00469864 /* DogFactsViewModel.swift in Sources */,
+				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */,
