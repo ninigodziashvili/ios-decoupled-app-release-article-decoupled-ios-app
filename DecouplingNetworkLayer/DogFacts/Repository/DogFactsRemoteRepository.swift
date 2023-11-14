@@ -1,6 +1,11 @@
 import Foundation
 
-final internal class DogFactsRemoteRepository: DogFactsRepository {
+protocol DogFactsRepository {
+  typealias DogFactResult = Result<DogFactData, DogFactError>
+  func getRandomFact(handler: @escaping (DogFactResult) -> Void)
+}
+
+final public class DogFactsRemoteRepository: DogFactsRepository {
   private let httpClient: HTTPClient
   private let api: DogFactsAPI
   private let executionQueue: DispatchQueue
