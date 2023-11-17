@@ -11,7 +11,7 @@ struct DogFactsAPI {
 // MARK: - Extensions
 
 extension DogFactsAPI {
-    var factsURL: URL { getURL(path: "facts") }
+    var factsURL: URL { getURL(path: "users") }
 }
 
 // MARK: - Helpers

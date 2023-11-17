@@ -27,8 +27,9 @@ final public class DogFactsRemoteRepository: DogFactsRepository {
             self?.execute {
                 switch result {
                 case .success(let data):
-                    if let dto = Self.parse(type: DogFactDTO.self, data: data) {
-                        handler(.success(dto.toData))
+                    if let persons = Self.parse(type: Persons.self, data: data) {
+                        let dogFactData = Person.namesData(from: persons)
+                        handler(.success(dogFactData))
                     } else {
                         handler(.failure(.notParsable(data)))
                     }
@@ -50,10 +51,9 @@ final public class DogFactsRemoteRepository: DogFactsRepository {
     }
 }
 
-fileprivate extension DogFactDTO {
-    var toData: DogFactData {
-        return DogFactData(
-            factMessage: facts.reduce(into: "", { $0.append(contentsOf: $1) })
-        )
+fileprivate extension Person {
+    static func namesData(from persons: Persons) -> DogFactData {
+        let names = persons.compactMap { $0.name }
+        return DogFactData(names: names)
     }
 }
