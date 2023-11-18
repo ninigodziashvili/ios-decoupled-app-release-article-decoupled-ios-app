@@ -3,18 +3,18 @@ import Foundation
 class DonationSwiftUIViewModel: ObservableObject {
     private let repository: DonationRepositoryProtocol
     
-    @Published var factMessage: DonationData? = .init(names: [])
+    @Published var donationData: DonationData? = .init(names: [])
     @Published var errorMessage: String = ""
     
     init(repository: DonationRepositoryProtocol) {
         self.repository = repository
     }
     
-    func fetchRandomFact() {
-        repository.getRandomFact { result in
+    func fetchPersonsData() {
+        repository.getPersons { result in
             switch result {
-            case .success(let fact):
-                self.factMessage = fact
+            case .success(let name):
+                self.donationData = name
             case .failure(let error):
                 self.errorMessage = error.localizedDescription
             }

@@ -2,7 +2,7 @@ import Foundation
 
 protocol DonationRepositoryProtocol {
     typealias DonationResult = Result<DonationData, DonationError>
-    func getRandomFact(handler: @escaping (DonationResult) -> Void)
+    func getPersons(handler: @escaping (DonationResult) -> Void)
 }
 
 final public class DonationRemoteRepository: DonationRepositoryProtocol {
@@ -22,8 +22,8 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
     
     // MARK: - DonationRepository
     
-    func getRandomFact(handler: @escaping (DonationResult) -> Void) {
-        httpClient.get(api.factsURL) { [weak self] result in
+    func getPersons(handler: @escaping (DonationResult) -> Void) {
+        httpClient.get(api.personsURL) { [weak self] result in
             self?.execute {
                 switch result {
                 case .success(let data):

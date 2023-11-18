@@ -11,7 +11,7 @@ struct PersonAPI {
 // MARK: - Extensions
 
 extension PersonAPI {
-    var factsURL: URL { getURL(path: "users") }
+    var personsURL: URL { getURL(path: "users") }
 }
 
 // MARK: - Helpers

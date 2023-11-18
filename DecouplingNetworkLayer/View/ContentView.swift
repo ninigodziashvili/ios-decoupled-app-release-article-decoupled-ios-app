@@ -6,9 +6,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if let factMessages = viewModel.factMessage {
+                if let donationData = viewModel.donationData {
                     List {
-                        ForEach(factMessages, id: \.self) { message in
+                        ForEach(donationData, id: \.self) { message in
                             Text(message)
                         }
                     }
@@ -17,8 +17,8 @@ struct ContentView: View {
                     ProgressView()
                 }
                 
-                Button("Fetch Another Fact") {
-                    viewModel.fetchRandomFact()
+                Button("Fetch Another name") {
+                    viewModel.fetchPersonsData()
                 }
                 .padding()
                 
@@ -30,7 +30,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            viewModel.fetchRandomFact()
+            viewModel.fetchPersonsData()
         }
     }
 }
