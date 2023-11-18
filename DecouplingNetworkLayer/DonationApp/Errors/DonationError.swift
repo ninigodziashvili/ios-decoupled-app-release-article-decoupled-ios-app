@@ -1,6 +1,6 @@
 import Foundation
 
-enum DogFactError: Error {
+enum DonationError: Error {
     case notParsable(Data)
     case fetchError(Error)
 }

@@ -1,4 +1,4 @@
-struct DogFactData: RandomAccessCollection {
+struct DonationData: RandomAccessCollection {
     var names: [String]
     
     var startIndex: Int { names.startIndex }
@@ -8,6 +8,6 @@ struct DogFactData: RandomAccessCollection {
         return names[position]
     }
 }
-extension DogFactData {
-    static var empty: DogFactData { DogFactData(names: []) }
+extension DonationData {
+    static var empty: DonationData { DonationData(names: []) }
 }

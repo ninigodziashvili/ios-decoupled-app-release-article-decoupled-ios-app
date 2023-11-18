@@ -1,6 +1,6 @@
 import Foundation
 
-struct DogFactsAPI {
+struct PersonAPI {
     let environment: Environment
     
     init(environment: Environment) {
@@ -10,22 +10,22 @@ struct DogFactsAPI {
 
 // MARK: - Extensions
 
-extension DogFactsAPI {
+extension PersonAPI {
     var factsURL: URL { getURL(path: "users") }
 }
 
 // MARK: - Helpers
 
-fileprivate extension DogFactsAPI {
+fileprivate extension PersonAPI {
     func getURL(path: String) -> URL {
         URL(string: "\(environment.baseURL)/\(path)")!
     }
 }
 
-extension DogFactsAPI {
+extension PersonAPI {
     static var dev: Self {
-        DogFactsAPI(
-            environment: DogFactsEnvironment()
+        PersonAPI(
+            environment: DonationEnvironment()
         )
     }
 }

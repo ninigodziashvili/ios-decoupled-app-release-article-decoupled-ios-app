@@ -1,12 +1,12 @@
 import Foundation
 
-class DogFactsSwiftUIViewModel: ObservableObject {
-    private let repository: DogFactsRepository
+class DonationSwiftUIViewModel: ObservableObject {
+    private let repository: DonationRepositoryProtocol
     
-    @Published var factMessage: DogFactData? = .init(names: [])
+    @Published var factMessage: DonationData? = .init(names: [])
     @Published var errorMessage: String = ""
     
-    init(repository: DogFactsRepository) {
+    init(repository: DonationRepositoryProtocol) {
         self.repository = repository
     }
     

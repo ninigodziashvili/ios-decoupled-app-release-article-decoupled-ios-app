@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = DogFactsSwiftUIViewModel(repository: DogFactsRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
+    @StateObject private var viewModel = DonationSwiftUIViewModel(repository: DonationRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
     
     var body: some View {
         NavigationView {
@@ -12,7 +12,7 @@ struct ContentView: View {
                             Text(message)
                         }
                     }
-                    .navigationTitle("Dog Facts")
+                    .navigationTitle("Donor Names")
                 } else {
                     ProgressView()
                 }
@@ -34,8 +34,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

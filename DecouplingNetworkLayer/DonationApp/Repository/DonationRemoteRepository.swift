@@ -1,18 +1,18 @@
 import Foundation
 
-protocol DogFactsRepository {
-    typealias DogFactResult = Result<DogFactData, DogFactError>
-    func getRandomFact(handler: @escaping (DogFactResult) -> Void)
+protocol DonationRepositoryProtocol {
+    typealias DonationResult = Result<DonationData, DonationError>
+    func getRandomFact(handler: @escaping (DonationResult) -> Void)
 }
 
-final public class DogFactsRemoteRepository: DogFactsRepository {
+final public class DonationRemoteRepository: DonationRepositoryProtocol {
     private let httpClient: HTTPClient
-    private let api: DogFactsAPI
+    private let api: PersonAPI
     private let executionQueue: DispatchQueue
     
     internal init(
         httpClient: HTTPClient,
-        api: DogFactsAPI,
+        api: PersonAPI,
         executionQueue: DispatchQueue = .main
     ) {
         self.httpClient = httpClient
@@ -20,16 +20,16 @@ final public class DogFactsRemoteRepository: DogFactsRepository {
         self.executionQueue = executionQueue
     }
     
-    // MARK: - DogFactsRepository
+    // MARK: - DonationRepository
     
-    func getRandomFact(handler: @escaping (DogFactResult) -> Void) {
+    func getRandomFact(handler: @escaping (DonationResult) -> Void) {
         httpClient.get(api.factsURL) { [weak self] result in
             self?.execute {
                 switch result {
                 case .success(let data):
                     if let persons = Self.parse(type: Persons.self, data: data) {
-                        let dogFactData = Person.namesData(from: persons)
-                        handler(.success(dogFactData))
+                        let personData = Person.namesData(from: persons)
+                        handler(.success(personData))
                     } else {
                         handler(.failure(.notParsable(data)))
                     }
@@ -52,8 +52,8 @@ final public class DogFactsRemoteRepository: DogFactsRepository {
 }
 
 fileprivate extension Person {
-    static func namesData(from persons: Persons) -> DogFactData {
+    static func namesData(from persons: Persons) -> DonationData {
         let names = persons.compactMap { $0.name }
-        return DogFactData(names: names)
+        return DonationData(names: names)
     }
 }
