@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2C194D2B0D17C600C8CF35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C194C2B0D17C600C8CF35 /* Constants.swift */; };
 		4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558B2B0396AA003A26F0 /* ContentView.swift */; };
 		4C65558E2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */; };
 		4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2C194C2B0D17C600C8CF35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C65558B2B0396AA003A26F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplingNetworkLayerApp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				AC0B6102287A1773006AEFD0 /* AppDelegate.swift */,
 				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
 				4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */,
+				4C2C194C2B0D17C600C8CF35 /* Constants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* Person.swift in Sources */,
+				4C2C194D2B0D17C600C8CF35 /* Constants.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DonationRemoteRepository.swift in Sources */,
 				AC0AD02A287A32C700469864 /* PersonAPI.swift in Sources */,
 				4C65558E2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift in Sources */,
