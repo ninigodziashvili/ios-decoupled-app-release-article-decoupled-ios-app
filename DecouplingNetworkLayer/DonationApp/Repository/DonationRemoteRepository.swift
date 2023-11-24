@@ -3,6 +3,7 @@ import Foundation
 protocol DonationRepositoryProtocol {
     typealias DonationResult = Result<DonationData, DonationError>
     func getPersons(handler: @escaping (DonationResult) -> Void)
+    func getPersonsLocalData(handler: @escaping (DonationResult) -> Void)
 }
 
 final public class DonationRemoteRepository: DonationRepositoryProtocol {
@@ -39,6 +40,25 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
             }
         }
     }
+
+    func getPersonsLocalData(handler: @escaping (DonationResult) -> Void) {
+          guard let path = Bundle.main.path(forResource: "personsJsonData", ofType: "json") else {
+              handler(.failure(.statement("Local JSON file not found")))
+              return
+          }
+          
+          do {
+              let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+              if let persons = DonationRemoteRepository.parse(type: [Person].self, data: data) {
+                  let personData = Person.namesData(from: persons)
+                  handler(.success(personData))
+              } else {
+                  handler(.failure(.notParsable(data)))
+              }
+          } catch {
+              handler(.failure(.statement("Local JSON file not found")))
+          }
+      }
     
     // MARK: - Helpers
     

@@ -11,7 +11,7 @@ class DonationSwiftUIViewModel: ObservableObject {
     }
     
     func fetchPersonsData() {
-        repository.getPersons { result in
+        repository.getPersonsLocalData { result in
             switch result {
             case .success(let name):
                 self.donationData = name

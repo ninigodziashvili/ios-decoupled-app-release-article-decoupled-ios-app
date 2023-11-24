@@ -5,8 +5,10 @@ public struct Person: Codable {
     public var name: String?
     public var username: String?
     public var email: String?
+    public var bloodyGroup: String?
     public var address: Address?
-    public var phone, website: String?
+    public var phone: String?
+    public var website: String?
     public var company: Company?
 }
 
