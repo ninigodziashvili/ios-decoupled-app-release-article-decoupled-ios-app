@@ -5,11 +5,18 @@ public struct Person: Codable {
     public var name: String?
     public var username: String?
     public var email: String?
-    public var bloodyGroup: String?
+    public var bloodyGroup: BloodyGroup?
     public var address: Address?
     public var phone: String?
     public var website: String?
     public var company: Company?
+}
+
+public enum BloodyGroup: String, Codable {
+    case I
+    case II
+    case III
+    case IV
 }
 
 // MARK: - Address

@@ -1,16 +1,17 @@
 import Foundation
 
 struct Constants {
-    enum FilterData {
+    struct FilterData {
         static let filter = "Filter"
         static let all = "All"
         static let i = "I"
         static let ii = "II"
         static let iii = "III"
         static let iv = "IV"
+        static let allFilters = [all, i, ii, iii, iv]
     }
     
-    enum TitleData {
+    struct TitleData {
         static let donorNames = "Donor Names"
     }
 }

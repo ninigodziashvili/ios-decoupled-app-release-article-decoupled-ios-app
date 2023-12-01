@@ -8,18 +8,16 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Picker(Constants.FilterData.filter, selection: $selectedFilter) {
-                    Text(Constants.FilterData.all).tag(0)
-                    Text(Constants.FilterData.i).tag(1)
-                    Text(Constants.FilterData.ii).tag(2)
-                    Text(Constants.FilterData.iii).tag(3)
-                    Text(Constants.FilterData.iv).tag(4)
+                    ForEach(0..<5) { index in
+                        Text(Constants.FilterData.allFilters[index]).tag(index)
+                    }
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 
                 if let donationData = viewModel.donationData {
                     List {
-                        ForEach(filteredDonors(from: donationData.names), id: \.self) { message in
+                        ForEach(filteredDonors(from: donationData.persons.map { $0.name ?? "" }), id: \.self) { message in
                             Text(message)
                         }
                     }
@@ -38,8 +36,12 @@ struct ContentView: View {
         if selectedFilter == 0 {
             return donationData
         } else {
-            return donationData.filter { donor in
-                return true
+            let bloodGroup = Constants.FilterData.allFilters[selectedFilter]
+            return donationData.filter { donorName in
+                guard let person = viewModel.donationData?.persons.first(where: { $0.name == donorName }) else {
+                    return false
+                }
+                return person.bloodyGroup?.rawValue == bloodGroup
             }
         }
     }

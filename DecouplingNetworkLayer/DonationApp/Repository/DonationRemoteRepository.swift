@@ -73,7 +73,7 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
 
 fileprivate extension Person {
     static func namesData(from persons: Persons) -> DonationData {
-        let names = persons.compactMap { $0.name }
-        return DonationData(names: names)
+        let persons = persons.compactMap { $0 }
+        return DonationData(persons: persons)
     }
 }

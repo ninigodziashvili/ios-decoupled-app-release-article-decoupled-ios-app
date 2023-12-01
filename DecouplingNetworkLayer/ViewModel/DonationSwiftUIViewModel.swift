@@ -3,7 +3,7 @@ import Foundation
 class DonationSwiftUIViewModel: ObservableObject {
     private let repository: DonationRepositoryProtocol
     
-    @Published var donationData: DonationData? = .init(names: [])
+    @Published var donationData: DonationData? = .init(persons: [])
     @Published var errorMessage: String = ""
     
     init(repository: DonationRepositoryProtocol) {
