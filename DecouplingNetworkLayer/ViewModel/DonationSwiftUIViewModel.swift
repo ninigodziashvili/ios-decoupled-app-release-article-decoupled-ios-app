@@ -20,5 +20,14 @@ class DonationSwiftUIViewModel: ObservableObject {
             }
         }
     }
+    
+    func filteredPersons(from persons: [Person], by selectedFilter: Int) -> [Person] {
+        if selectedFilter == 0 {
+            return persons
+        } else {
+            let bloodGroup = Constants.FilterData.allFilters[selectedFilter]
+            return persons.filter { $0.bloodyGroup?.rawValue == bloodGroup }
+        }
+    }
 }
 

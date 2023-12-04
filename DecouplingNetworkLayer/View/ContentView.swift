@@ -17,7 +17,7 @@ struct ContentView: View {
                 
                 if let donationData = viewModel.donationData {
                     List {
-                        ForEach(filteredPersons(from: donationData.persons), id: \.id) { person in
+                        ForEach(viewModel.filteredPersons(from: donationData.persons, by: selectedFilter), id: \.id) { person in
                             if let name = person.name {
                                 HStack {
                                     Text(name)
@@ -39,15 +39,6 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.fetchPersonsData()
-        }
-    }
-    
-    func filteredPersons(from persons: [Person]) -> [Person] {
-        if selectedFilter == 0 {
-            return persons
-        } else {
-            let bloodGroup = Constants.FilterData.allFilters[selectedFilter]
-            return persons.filter { $0.bloodyGroup?.rawValue == bloodGroup }
         }
     }
 }
