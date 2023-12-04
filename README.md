@@ -10,6 +10,4 @@ Hello and welcome! 👋 In this repository you'll find:
 - An API definition to model the API.
 - And more importantly, we have created a decoupled feature that can be isolated, mocked, and tested on each layer.
 
-All of these on a very simple feature: Fetch random Dog 🐕 facts.
-
 Happy Coding <3
