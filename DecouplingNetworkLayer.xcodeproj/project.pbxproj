@@ -12,6 +12,7 @@
 		4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558B2B0396AA003A26F0 /* ContentView.swift */; };
 		4C65558E2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */; };
 		4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */; };
+		4CC500412B1A1E1F006B3EF6 /* BloodyIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC500402B1A1E1F006B3EF6 /* BloodyIconView.swift */; };
 		AC0AD017287A1DA100469864 /* DonationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD016287A1DA100469864 /* DonationError.swift */; };
 		AC0AD019287A1DC700469864 /* DonationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD018287A1DC700469864 /* DonationData.swift */; };
 		AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD01C287A1E4900469864 /* URLSessionHTTPClient.swift */; };
@@ -32,6 +33,7 @@
 		4C65558B2B0396AA003A26F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplingNetworkLayerApp.swift; sourceTree = "<group>"; };
+		4CC500402B1A1E1F006B3EF6 /* BloodyIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodyIconView.swift; sourceTree = "<group>"; };
 		AC0AD016287A1DA100469864 /* DonationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationError.swift; sourceTree = "<group>"; };
 		AC0AD018287A1DC700469864 /* DonationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationData.swift; sourceTree = "<group>"; };
 		AC0AD01C287A1E4900469864 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4C65558B2B0396AA003A26F0 /* ContentView.swift */,
+				4CC500402B1A1E1F006B3EF6 /* BloodyIconView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				AC0AD028287A328B00469864 /* DonationEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DonationData.swift in Sources */,
 				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
+				4CC500412B1A1E1F006B3EF6 /* BloodyIconView.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */,

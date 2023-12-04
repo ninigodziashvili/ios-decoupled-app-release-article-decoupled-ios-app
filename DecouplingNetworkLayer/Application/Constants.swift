@@ -12,6 +12,6 @@ struct Constants {
     }
     
     struct TitleData {
-        static let donorNames = "Donor Names"
+        static let donorNames = "Donors"
     }
 }

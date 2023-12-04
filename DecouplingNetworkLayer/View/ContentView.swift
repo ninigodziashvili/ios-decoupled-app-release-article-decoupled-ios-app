@@ -17,8 +17,18 @@ struct ContentView: View {
                 
                 if let donationData = viewModel.donationData {
                     List {
-                        ForEach(filteredDonors(from: donationData.persons.map { $0.name ?? "" }), id: \.self) { message in
-                            Text(message)
+                        ForEach(filteredPersons(from: donationData.persons), id: \.id) { person in
+                            if let name = person.name {
+                                HStack {
+                                    Text(name)
+                                    Spacer()
+                                    if let group = person.bloodyGroup {
+                                        if selectedFilter == 0 {
+                                            BloodyIconView(group: group)
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     .navigationTitle(Constants.TitleData.donorNames)
@@ -32,17 +42,12 @@ struct ContentView: View {
         }
     }
     
-    func filteredDonors(from donationData: [String]) -> [String] {
+    func filteredPersons(from persons: [Person]) -> [Person] {
         if selectedFilter == 0 {
-            return donationData
+            return persons
         } else {
             let bloodGroup = Constants.FilterData.allFilters[selectedFilter]
-            return donationData.filter { donorName in
-                guard let person = viewModel.donationData?.persons.first(where: { $0.name == donorName }) else {
-                    return false
-                }
-                return person.bloodyGroup?.rawValue == bloodGroup
-            }
+            return persons.filter { $0.bloodyGroup?.rawValue == bloodGroup }
         }
     }
 }
