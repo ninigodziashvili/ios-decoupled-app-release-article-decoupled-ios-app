@@ -33,7 +33,7 @@ struct ContentView: View {
                     }
                     .navigationTitle(Constants.TitleData.donorNames)
                 } else {
-                    ProgressView()
+                    SkeletonListView()
                 }
             }
         }
