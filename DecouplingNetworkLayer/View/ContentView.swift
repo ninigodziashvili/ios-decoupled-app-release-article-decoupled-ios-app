@@ -18,16 +18,16 @@ struct ContentView: View {
                 if let donationData = viewModel.donationData {
                     List {
                         ForEach(viewModel.filteredPersons(from: donationData.persons, by: selectedFilter), id: \.id) { person in
-                            if let name = person.name {
+                            if let name = person.name, let group = person.bloodyGroup {
                                 HStack {
                                     Text(name)
                                     Spacer()
-                                    if let group = person.bloodyGroup {
-                                        if selectedFilter == 0 {
-                                            BloodyIconView(group: group)
-                                        }
-                                    }
+                                    Image(systemName: "drop.fill")
+                                        .foregroundColor(.red)
+                                    Text(group.rawValue)
+                                        .font(.system(size: 15))
                                 }
+                                .padding()
                             }
                         }
                     }
