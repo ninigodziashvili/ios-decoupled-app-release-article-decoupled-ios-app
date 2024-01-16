@@ -7,7 +7,7 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 5) {
+            VStack(spacing: 15) {
                 LottieView(animationName: "loginAnimation")
                     .frame(height: 450)
                     .padding()
