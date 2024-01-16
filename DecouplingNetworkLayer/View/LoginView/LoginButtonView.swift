@@ -3,10 +3,11 @@ import SwiftUI
 
 struct LoginButtonView: View {
     @ObservedObject var viewModel: LoginViewModel
+    var action: () -> Void
     
     var body: some View {
         Button(action: {
-            viewModel.login()
+            action()
         }) {
             Text("Login")
                 .padding()

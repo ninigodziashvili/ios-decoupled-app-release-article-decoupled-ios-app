@@ -5,7 +5,6 @@ struct ContentView: View {
     @State private var selectedFilter = 0
     
     var body: some View {
-        NavigationView {
             VStack {
                 Picker(Constants.FilterData.filter, selection: $selectedFilter) {
                     ForEach(0..<5) { index in
@@ -36,7 +35,6 @@ struct ContentView: View {
                     SkeletonListView()
                 }
             }
-        }
         .onAppear {
             viewModel.fetchPersonsData()
         }

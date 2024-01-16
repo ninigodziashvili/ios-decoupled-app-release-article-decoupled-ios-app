@@ -6,10 +6,10 @@ struct InputFieldsView: View {
     
     var body: some View {
         VStack(spacing: -10) {
-            TextField(LocalizedStringKey("Username"), text: $viewModel.username)
+            TextField(LocalizedStringKey("Enter Username"), text: $viewModel.username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-            SecureField(LocalizedStringKey("Password"), text: $viewModel.password)
+            SecureField(LocalizedStringKey("Enter Password"), text: $viewModel.password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
         }
