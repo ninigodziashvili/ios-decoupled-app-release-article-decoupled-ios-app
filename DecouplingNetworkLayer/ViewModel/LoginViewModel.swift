@@ -1,7 +1,11 @@
 import SwiftUI
 import Combine
 
-class LoginViewModel: ObservableObject {
+protocol NoavigationProtocol {
+    func navigateListPage()
+}
+
+class LoginViewModel: ObservableObject, NoavigationProtocol {
     private let userRepository = UserRepository()
     private var cancellables = Set<AnyCancellable>()
     
@@ -9,19 +13,24 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var isLoggingIn = false
     @Published var authenticationFailed = false
+    @Published var navigateToListPage = false
     
     func login() {
         isLoggingIn = true
         userRepository.login(username: username, password: password) { [weak self] success in
             DispatchQueue.main.async {
-                self?.isLoggingIn = false
-                self?.authenticationFailed = !success
-                
                 if success {
-                    AuthManager.shared.isAuthenticated = true
-                    // Handle successful login
+                    self?.navigateListPage()
                 }
             }
         }
     }
-}
+
+    func navigateListPage() {
+        guard !username.isEmpty, !password.isEmpty else {
+            self.navigateToListPage = false
+             return
+         }
+        navigateToListPage = true
+    }
+}  

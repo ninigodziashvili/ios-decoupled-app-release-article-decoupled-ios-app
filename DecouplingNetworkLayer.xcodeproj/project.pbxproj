@@ -23,7 +23,6 @@
 		4CE1B0732B1F5F6A007EA7E8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE1B0722B1F5F6A007EA7E8 /* Lottie */; };
 		4CE1B0752B1F62C9007EA7E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B0742B1F62C9007EA7E8 /* UserRepository.swift */; };
 		4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B0762B1F63A7007EA7E8 /* LoginViewModel.swift */; };
-		4CE1B0792B1F63DC007EA7E8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B0782B1F63DC007EA7E8 /* AuthManager.swift */; };
 		4CE1B07B2B1F648D007EA7E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B07A2B1F648D007EA7E8 /* LoginView.swift */; };
 		AC0AD017287A1DA100469864 /* DonationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD016287A1DA100469864 /* DonationError.swift */; };
 		AC0AD019287A1DC700469864 /* DonationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD018287A1DC700469864 /* DonationData.swift */; };
@@ -56,7 +55,6 @@
 		4C9F110C2B39BFBB001DB46D /* SkeletonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonListView.swift; sourceTree = "<group>"; };
 		4CE1B0742B1F62C9007EA7E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4CE1B0762B1F63A7007EA7E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		4CE1B0782B1F63DC007EA7E8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		4CE1B07A2B1F648D007EA7E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AC0AD016287A1DA100469864 /* DonationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationError.swift; sourceTree = "<group>"; };
 		AC0AD018287A1DC700469864 /* DonationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationData.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 		4C9A5E152B23280300C2E606 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4CE1B0782B1F63DC007EA7E8 /* AuthManager.swift */,
 				4C0141A72B235B5C000B4D2A /* LocalizedStringKey+Extension.swift */,
 			);
 			path = Manager;
@@ -347,7 +344,6 @@
 				AC0AD028287A328B00469864 /* DonationEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DonationData.swift in Sources */,
 				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
-				4CE1B0792B1F63DC007EA7E8 /* AuthManager.swift in Sources */,
 				4C9F07292B2B1A5500B0EAE4 /* LoginButtonView.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				4C0141A82B235B5C000B4D2A /* LocalizedStringKey+Extension.swift in Sources */,

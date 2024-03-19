@@ -14,19 +14,20 @@ struct LoginView: View {
                 InputFieldsView(viewModel: viewModel)
                 Spacer()
                 LoginButtonView(viewModel: viewModel) {
-                    //  viewModel.login()
+                    viewModel.navigateListPage()
                     navigateToSecondPage = true
                 }
-                NavigationLink(destination: ContentView(), isActive: $navigateToSecondPage) {
-                    EmptyView()
-                }
+                .background(
+                    NavigationLink(destination: ContentView(), isActive: $viewModel.navigateToListPage) {
+                        EmptyView()
+                    }
+                )
                 
                 if viewModel.isLoggingIn {
                     ProgressView()
                         .padding()
                 }
                 if !viewModel.authenticationFailed {
-                    //                    ErrorView(message: LocalizedStringKey("errorMessage"))
                 }
             }
             .padding()
