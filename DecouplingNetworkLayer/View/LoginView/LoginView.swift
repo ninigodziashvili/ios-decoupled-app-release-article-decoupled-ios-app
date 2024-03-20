@@ -12,9 +12,14 @@ struct LoginView: View {
                     .frame(height: 450)
                     .padding()
                 InputFieldsView(viewModel: viewModel)
+                if viewModel.validationError {
+                    Text("Please enter Username and Password")
+                        .foregroundColor(.red)
+                        .padding(.top, 4)
+                }
                 Spacer()
                 LoginButtonView(viewModel: viewModel) {
-                    viewModel.navigateListPage()
+                    viewModel.login()
                     navigateToSecondPage = true
                 }
                 .background(
@@ -26,8 +31,6 @@ struct LoginView: View {
                 if viewModel.isLoggingIn {
                     ProgressView()
                         .padding()
-                }
-                if !viewModel.authenticationFailed {
                 }
             }
             .padding()
