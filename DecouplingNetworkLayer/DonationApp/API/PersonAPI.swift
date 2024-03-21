@@ -8,7 +8,7 @@ struct PersonAPI {
     }
 }
 
-// MARK: - Extensions
+// MARK: - Extension
 
 extension PersonAPI {
     var personsURL: URL { getURL(path: "users") }
@@ -17,7 +17,7 @@ extension PersonAPI {
 // MARK: - Helpers
 
 fileprivate extension PersonAPI {
-    func getURL(path: String) -> URL {
+    private func getURL(path: String) -> URL {
         URL(string: "\(environment.baseURL)/\(path)")!
     }
 }

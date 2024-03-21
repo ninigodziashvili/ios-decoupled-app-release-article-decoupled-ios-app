@@ -25,7 +25,7 @@ public final class URLSessionHTTPClient: HTTPClient {
 // MARK: - Response handlers
 
 extension URLSessionHTTPClient {
-    internal static func handle(data: Data?, error: Error?, response: URLResponse?) -> Result<Data,URLSessionHTTPClientError> {
+    private static func handle(data: Data?, error: Error?, response: URLResponse?) -> Result<Data,URLSessionHTTPClientError> {
         if let _data = data,
            error == nil,
            let _response = response,

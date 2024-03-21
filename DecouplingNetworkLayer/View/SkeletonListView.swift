@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
 
+// MARK: - Skeleton
+
 struct SkeletonListView: View {
     var body: some View {
         List {
@@ -12,6 +14,8 @@ struct SkeletonListView: View {
 }
 
 struct SkeletonRowView: View {
+    // MARK: - Body
+    
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: 8)

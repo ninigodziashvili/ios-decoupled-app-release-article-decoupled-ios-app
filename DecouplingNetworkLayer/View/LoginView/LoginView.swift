@@ -2,8 +2,12 @@ import Lottie
 import SwiftUI
 
 struct LoginView: View {
+    // MARK: - Private Properties
+    
     @StateObject private var viewModel = LoginViewModel()
     @State private var navigateToSecondPage = false
+    
+    // MARK: - Body
     
     var body: some View {
         NavigationView {

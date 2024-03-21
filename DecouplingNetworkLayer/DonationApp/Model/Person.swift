@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Person
+
 public struct Person: Codable {
     public var id: Int?
     public var name: String?
@@ -11,6 +13,8 @@ public struct Person: Codable {
     public var website: String?
     public var company: Company?
 }
+
+// MARK: - BloodyGroup
 
 public enum BloodyGroup: String, Codable {
     case I
@@ -29,7 +33,7 @@ public struct Address: Codable {
     public var geo: Location?
 }
 
-// MARK: - Geo
+// MARK: - Location
 
 public struct Location: Codable {
     public var lat: String?

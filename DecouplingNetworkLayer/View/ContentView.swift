@@ -1,8 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Private Properties
+    
     @StateObject private var viewModel = DonationSwiftUIViewModel(repository: DonationRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
     @State private var selectedFilter = 0
+    
+    // MARK: - Body
     
     var body: some View {
         VStack {

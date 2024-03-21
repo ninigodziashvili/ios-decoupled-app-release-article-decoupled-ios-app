@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0141A82B235B5C000B4D2A /* LocalizedStringKey+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0141A72B235B5C000B4D2A /* LocalizedStringKey+Extension.swift */; };
 		4C2C194D2B0D17C600C8CF35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C194C2B0D17C600C8CF35 /* Constants.swift */; };
 		4C5CDEA22B10C2B000BA42F0 /* personsJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CDEA02B10AD1400BA42F0 /* personsJsonData.json */; };
 		4C5D49372B20AAE7002C1B4E /* loginAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C5D49362B20AAE7002C1B4E /* loginAnimation.json */; };
@@ -39,7 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C0141A72B235B5C000B4D2A /* LocalizedStringKey+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedStringKey+Extension.swift"; sourceTree = "<group>"; };
 		4C2C194C2B0D17C600C8CF35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C5CDEA02B10AD1400BA42F0 /* personsJsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = personsJsonData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		4C5D49362B20AAE7002C1B4E /* loginAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginAnimation.json; sourceTree = "<group>"; };
@@ -116,8 +114,8 @@
 			children = (
 				4C65558B2B0396AA003A26F0 /* ContentView.swift */,
 				4C9F110C2B39BFBB001DB46D /* SkeletonListView.swift */,
-				4C9A5E0F2B2326CB00C2E606 /* LoginView */,
 				4C5D49382B20B1ED002C1B4E /* LottieView.swift */,
+				4C9A5E0F2B2326CB00C2E606 /* LoginView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,14 +141,6 @@
 				4C9A5E142B23278000C2E606 /* Login.strings */,
 			);
 			path = LoginView;
-			sourceTree = "<group>";
-		};
-		4C9A5E152B23280300C2E606 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				4C0141A72B235B5C000B4D2A /* LocalizedStringKey+Extension.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		AC0AD011287A1BEF00469864 /* DonationApp */ = {
@@ -227,10 +217,9 @@
 		AC0B6101287A1773006AEFD0 /* DecouplingNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				4C9A5E152B23280300C2E606 /* Manager */,
-				4C5CDEA12B10AD7900BA42F0 /* Resources */,
 				AC0B610B287A1776006AEFD0 /* Assets.xcassets */,
 				AC0B6110287A1776006AEFD0 /* Info.plist */,
+				4C5CDEA12B10AD7900BA42F0 /* Resources */,
 				4C6555892B038969003A26F0 /* Application */,
 				AC0AD011287A1BEF00469864 /* DonationApp */,
 				4C6555872B038941003A26F0 /* ViewModel */,
@@ -346,7 +335,6 @@
 				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
 				4C9F07292B2B1A5500B0EAE4 /* LoginButtonView.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
-				4C0141A82B235B5C000B4D2A /* LocalizedStringKey+Extension.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				4CE1B07B2B1F648D007EA7E8 /* LoginView.swift in Sources */,
 				AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */,

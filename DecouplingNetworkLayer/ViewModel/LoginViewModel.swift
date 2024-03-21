@@ -6,6 +6,8 @@ protocol NoavigationProtocol {
 }
 
 class LoginViewModel: ObservableObject, NoavigationProtocol {
+    // MARK: - Properties
+    
     private let userRepository = UserRepository()
     private var cancellables = Set<AnyCancellable>()
     
@@ -38,6 +40,8 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
         }
         navigateToListPage = true
     }
+    
+    // MARK: - Private Methods
     
     private func validationInput() -> Bool {
         let isValid = !username.isEmpty && !password.isEmpty

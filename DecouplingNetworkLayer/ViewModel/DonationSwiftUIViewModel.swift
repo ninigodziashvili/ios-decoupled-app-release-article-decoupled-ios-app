@@ -1,6 +1,8 @@
 import Foundation
 
 class DonationSwiftUIViewModel: ObservableObject {
+    // MARK: - Properties
+    
     private let repository: DonationRepositoryProtocol
     
     @Published var donationData: DonationData? = .init(persons: [])

@@ -2,6 +2,7 @@ import Foundation
 
 protocol DonationRepositoryProtocol {
     typealias DonationResult = Result<DonationData, DonationError>
+    
     func getPersons(handler: @escaping (DonationResult) -> Void)
     func getPersonsLocalData(handler: @escaping (DonationResult) -> Void)
 }
@@ -11,8 +12,7 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
     private let api: PersonAPI
     private let executionQueue: DispatchQueue
     
-    internal init(
-        httpClient: HTTPClient,
+     init(httpClient: HTTPClient,
         api: PersonAPI,
         executionQueue: DispatchQueue = .main
     ) {
@@ -70,6 +70,8 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
         return try? JSONDecoder().decode(T.self, from: data)
     }
 }
+
+// MARK: - Extension
 
 fileprivate extension Person {
     static func namesData(from persons: Persons) -> DonationData {

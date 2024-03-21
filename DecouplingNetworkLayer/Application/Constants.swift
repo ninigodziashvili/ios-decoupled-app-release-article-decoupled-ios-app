@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Constants
+
 struct Constants {
     struct FilterData {
         static let filter = "Filter"

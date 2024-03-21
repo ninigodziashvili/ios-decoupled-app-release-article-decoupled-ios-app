@@ -5,6 +5,8 @@ struct LoginButtonView: View {
     @ObservedObject var viewModel: LoginViewModel
     var action: () -> Void
     
+    // MARK: - Body
+    
     var body: some View {
         Button(action: {
             action()
