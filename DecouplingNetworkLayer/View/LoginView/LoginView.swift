@@ -11,7 +11,7 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 15) {
+            VStack(spacing: 0) {
                 LottieView(animationName: "loginAnimation")
                     .frame(height: 450)
                     .padding()
@@ -21,7 +21,16 @@ struct LoginView: View {
                         .foregroundColor(.red)
                         .padding(.top, 4)
                 }
+            
+                Button ("Forgot Password?") {
+                    viewModel.handleForgotPassword()
+                }
+                .padding(.trailing, 20)
+                .padding(.bottom, 65)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                .foregroundColor(.gray)
                 Spacer()
+            
                 LoginButtonView(viewModel: viewModel) {
                     viewModel.login()
                     navigateToSecondPage = true
@@ -38,6 +47,9 @@ struct LoginView: View {
                 }
             }
             .padding()
+            .sheet(isPresented: $viewModel.isTappedForgotPassword, content: {
+                
+            })
         }
     }
 }
