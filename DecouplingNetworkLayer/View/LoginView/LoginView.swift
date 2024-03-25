@@ -16,17 +16,9 @@ struct LoginView: View {
                     .frame(height: 450)
                     .padding()
                 InputFieldsView(viewModel: viewModel)
-                Button {
+                ForgotPasswordButton(viewModel: viewModel) {
                     viewModel.handleForgotPassword()
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.system(size: 12))
-                        .fontWeight(.medium)
-                        .foregroundColor(.gray)
                 }
-                .padding(.trailing, 20)
-                .padding(.bottom, 56)
-                .frame(maxWidth: .infinity, alignment: .trailing)
                 Spacer()
                 if viewModel.validationError {
                     Text("Please enter Username and Password")
@@ -52,7 +44,6 @@ struct LoginView: View {
             }
             .padding()
             .sheet(isPresented: $viewModel.isTappedForgotPassword, content: {
-                // Add the Forgot Password view here if needed
             })
         }
     }
