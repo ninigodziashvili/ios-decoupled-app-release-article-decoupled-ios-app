@@ -10,6 +10,8 @@
 		4000A6AF2BAF2CD30087846C /* ForgotPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */; };
 		4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */; };
 		4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B32BB22A350087846C /* ForgotPasswordView.swift */; };
+		40DE76162BB4309400CD0012 /* FeedbackModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76152BB4309400CD0012 /* FeedbackModalViewModel.swift */; };
+		40DE76182BB4310200CD0012 /* FeedbackModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76172BB4310200CD0012 /* FeedbackModalView.swift */; };
 		4C2C194D2B0D17C600C8CF35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C194C2B0D17C600C8CF35 /* Constants.swift */; };
 		4C5CDEA22B10C2B000BA42F0 /* personsJsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CDEA02B10AD1400BA42F0 /* personsJsonData.json */; };
 		4C5D49372B20AAE7002C1B4E /* loginAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C5D49362B20AAE7002C1B4E /* loginAnimation.json */; };
@@ -44,6 +46,8 @@
 		4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordButton.swift; sourceTree = "<group>"; };
 		4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		4000A6B32BB22A350087846C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		40DE76152BB4309400CD0012 /* FeedbackModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModalViewModel.swift; sourceTree = "<group>"; };
+		40DE76172BB4310200CD0012 /* FeedbackModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModalView.swift; sourceTree = "<group>"; };
 		4C2C194C2B0D17C600C8CF35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C5CDEA02B10AD1400BA42F0 /* personsJsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = personsJsonData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		4C5D49362B20AAE7002C1B4E /* loginAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginAnimation.json; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4000A6B32BB22A350087846C /* ForgotPasswordView.swift */,
+				40DE76172BB4310200CD0012 /* FeedbackModalView.swift */,
 			);
 			path = ForgotPasswordView;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */,
 				4CE1B0762B1F63A7007EA7E8 /* LoginViewModel.swift */,
 				4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */,
+				40DE76152BB4309400CD0012 /* FeedbackModalViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -337,12 +343,14 @@
 				4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */,
 				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
+				40DE76162BB4309400CD0012 /* FeedbackModalViewModel.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* Person.swift in Sources */,
 				4C2C194D2B0D17C600C8CF35 /* Constants.swift in Sources */,
 				4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */,
 				4CE1B0752B1F62C9007EA7E8 /* UserRepository.swift in Sources */,
 				4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */,
 				4C9F07272B2B1A1700B0EAE4 /* ErrorView.swift in Sources */,
+				40DE76182BB4310200CD0012 /* FeedbackModalView.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DonationRemoteRepository.swift in Sources */,
 				4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */,
 				4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */,
