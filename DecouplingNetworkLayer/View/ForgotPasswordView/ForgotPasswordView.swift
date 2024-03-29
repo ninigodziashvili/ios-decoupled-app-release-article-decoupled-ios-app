@@ -49,7 +49,7 @@ struct ForgotPasswordView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
-                    .sheet(isPresented: $isShowingFeedback) {
+                    .halfSheet(showSheet: $isShowingFeedback) {
                         FeedbackModalView(viewModel: feedbackViewModel)
                     }
                 }

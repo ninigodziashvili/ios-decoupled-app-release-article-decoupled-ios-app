@@ -17,7 +17,7 @@ struct FeedbackModalView: View {
         GeometryReader { geometry in
             VStack(spacing: 10) {
                 LottieView(animationName: "successAnimation")
-                    .frame(maxWidth: 150, maxHeight: 150)
+                    .frame(maxWidth: 100, maxHeight: 200)
                     .scaleEffect(0.5)
                     .aspectRatio(contentMode: .fill)
                     .padding()
