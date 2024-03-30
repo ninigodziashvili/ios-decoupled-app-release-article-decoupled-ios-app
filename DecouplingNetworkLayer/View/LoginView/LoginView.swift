@@ -5,7 +5,8 @@ struct LoginView: View {
     // MARK: - Private Properties
     
     @StateObject private var viewModel = LoginViewModel()
-    @State private var navigateToSecondPage = false
+    @StateObject private var viewModelForgot = ForgotPasswordViewModel()
+    @State private var navigateToSecondPage = true
     
     // MARK: - Body
     
@@ -17,7 +18,7 @@ struct LoginView: View {
                     .padding()
                 InputFieldsView(viewModel: viewModel)
                 ForgotPasswordButton(viewModel: viewModel) {
-                    viewModel.handleForgotPassword()
+                    viewModel.isTappedForgotPassword = true
                 }
                 Spacer()
                 if viewModel.validationError {
@@ -44,6 +45,7 @@ struct LoginView: View {
             }
             .padding()
             .sheet(isPresented: $viewModel.isTappedForgotPassword, content: {
+                ForgotPasswordView()
             })
         }
     }

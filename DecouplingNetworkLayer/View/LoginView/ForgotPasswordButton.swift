@@ -10,18 +10,17 @@ import Foundation
 
 struct ForgotPasswordButton: View {
     @ObservedObject var viewModel: LoginViewModel
-    
     var action: () -> Void
     
-    // MARK: - Body
-    
     var body: some View {
-        Text("Forgot Password?")
-            .font(.system(size: 12))
-            .fontWeight(.medium)
-            .foregroundColor(.gray)
-            .padding(.trailing, 20)
-            .padding(.bottom, 56)
-            .frame(maxWidth: .infinity, alignment: .trailing)
+        Button(action: action) {
+            Text("Forgot Password?")
+                .font(.system(size: 12))
+                .fontWeight(.medium)
+                .foregroundColor(.gray)
+                .padding(.trailing, 20)
+                .padding(.bottom, 56)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+        }
     }
 }

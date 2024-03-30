@@ -4,7 +4,7 @@ import SwiftUI
 struct DecouplingNetworkLayer: App {
     var body: some Scene {
         WindowGroup {
-            ForgotPasswordView()
+           LoginView()
         }
     }
 }
