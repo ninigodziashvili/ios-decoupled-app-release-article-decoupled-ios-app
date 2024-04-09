@@ -35,6 +35,10 @@ struct ForgotPasswordView: View {
                         .foregroundColor(.gray)
                 }
                 .padding()
+                NavigationLink(destination: LoginView()) {
+                     EmptyView()
+                 }
+                 .hidden() 
                 VStack(spacing: 80) {
                     TextField("Email", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())

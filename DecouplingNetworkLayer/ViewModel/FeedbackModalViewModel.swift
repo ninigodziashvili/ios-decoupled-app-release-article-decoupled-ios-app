@@ -9,7 +9,9 @@ import Foundation
 
 class FeedbackModalViewModel: ObservableObject {
     @Published var message: String = "Successfully sent a link to your email. Please check your email to reset your password."
+    @Published var navigateBackToLogin = false
     
     func navigateToLoginPage() {
+        navigateBackToLogin = true
     }
 }
