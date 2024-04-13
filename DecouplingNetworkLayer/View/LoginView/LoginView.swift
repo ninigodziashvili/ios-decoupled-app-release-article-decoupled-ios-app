@@ -36,7 +36,6 @@ struct LoginView: View {
                         EmptyView()
                     }
                 )
-                
                 if viewModel.isLoggingIn {
                     ProgressView()
                         .padding()

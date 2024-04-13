@@ -36,9 +36,9 @@ struct ForgotPasswordView: View {
                 }
                 .padding()
                 NavigationLink(destination: LoginView()) {
-                     EmptyView()
-                 }
-                 .hidden() 
+                    EmptyView()
+                }
+                .hidden()
                 VStack(spacing: 80) {
                     TextField("Email", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -60,7 +60,7 @@ struct ForgotPasswordView: View {
                 .padding(.horizontal)
             }
             .padding()
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
         }
     }
 }

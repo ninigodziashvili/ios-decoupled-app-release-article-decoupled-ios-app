@@ -10,6 +10,8 @@ import Foundation
 class ForgotPasswordViewModel: ObservableObject {
     @Published var email: String = ""
     
+    // TODO: Reset password logic
+    
     public func resetPassword() {
     }
 }
