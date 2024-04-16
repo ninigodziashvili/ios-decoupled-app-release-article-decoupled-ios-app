@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheeView: @escaping () -> SheetView) -> some View {
+    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView) -> some View {
         return background {
-            HalfSheetHelper(sheetView: sheeView(), showSheet: showSheet)
+            HalfSheetHelper(sheetView: sheetView(), showSheet: showSheet, modalHeight: .zero)
         }
     }
 }

@@ -53,9 +53,17 @@ struct ForgotPasswordView: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
-                    .halfSheet(showSheet: $isShowingFeedback) {
+                    .sheet(isPresented: $isShowingFeedback) {
                         FeedbackModalView(viewModel: feedbackViewModel)
+                            //.frame(height: 500)
+                          //  .cornerRadius(16)
                     }
+                    .onReceive(feedbackViewModel.$dismissFeedback) { shouldDismiss in
+                        if shouldDismiss {
+                            isShowingFeedback = false
+                        }
+                    }
+                    .padding(.horizontal)
                 }
                 .padding(.horizontal)
             }

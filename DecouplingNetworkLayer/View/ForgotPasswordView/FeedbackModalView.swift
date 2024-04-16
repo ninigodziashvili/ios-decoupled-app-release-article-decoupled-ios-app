@@ -11,7 +11,6 @@ import Lottie
 
 struct FeedbackModalView: View {
     @ObservedObject var viewModel = FeedbackModalViewModel()
-    @State private var modalHeight: CGFloat = .zero
     
     var body: some View {
         GeometryReader { geometry in
@@ -26,9 +25,9 @@ struct FeedbackModalView: View {
                     .padding()
                 
                 Button(action: {
-                    viewModel.navigateToLoginPage()
+                    viewModel.dismiss()
                 }) {
-                    Text("Go to Login Page")
+                    Text("Done")
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color(red: 53/255, green: 53/255, blue: 53/255))
