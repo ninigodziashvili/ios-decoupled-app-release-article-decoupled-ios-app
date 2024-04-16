@@ -5,33 +5,37 @@ struct LoginView: View {
     // MARK: - Private Properties
     
     @StateObject private var viewModel = LoginViewModel()
-    @State private var navigateToSecondPage = false
     
     // MARK: - Body
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 15) {
+            VStack(spacing: 0) {
                 LottieView(animationName: "loginAnimation")
                     .frame(height: 450)
                     .padding()
                 InputFieldsView(viewModel: viewModel)
+                NavigationLink(destination: ForgotPasswordView(), isActive: $viewModel.isTappedForgotPassword) {
+                    ForgotPasswordButton(viewModel: viewModel) {
+                        viewModel.isTappedForgotPassword = true
+                    }
+                }
+                Spacer()
                 if viewModel.validationError {
                     Text("Please enter Username and Password")
                         .foregroundColor(.red)
-                        .padding(.top, 4)
+                        .font(.system(size: 14))
+                        .padding(.bottom, 13)
                 }
                 Spacer()
                 LoginButtonView(viewModel: viewModel) {
                     viewModel.login()
-                    navigateToSecondPage = true
                 }
                 .background(
                     NavigationLink(destination: ContentView(), isActive: $viewModel.navigateToListPage) {
                         EmptyView()
                     }
                 )
-                
                 if viewModel.isLoggingIn {
                     ProgressView()
                         .padding()

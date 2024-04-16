@@ -12,9 +12,9 @@ final public class DonationRemoteRepository: DonationRepositoryProtocol {
     private let api: PersonAPI
     private let executionQueue: DispatchQueue
     
-     init(httpClient: HTTPClient,
-        api: PersonAPI,
-        executionQueue: DispatchQueue = .main
+    init(httpClient: HTTPClient,
+         api: PersonAPI,
+         executionQueue: DispatchQueue = .main
     ) {
         self.httpClient = httpClient
         self.api = api

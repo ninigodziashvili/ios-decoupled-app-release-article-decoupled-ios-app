@@ -17,6 +17,7 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
     @Published var authenticationFailed = false
     @Published var navigateToListPage = false
     @Published var validationError = false
+    @Published var isTappedForgotPassword = false
     
     func login() {
         guard validationInput() else { return }
@@ -39,6 +40,10 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
             return
         }
         navigateToListPage = true
+    }
+    
+    func handleForgotPassword() {
+        isTappedForgotPassword = true
     }
     
     // MARK: - Private Methods
