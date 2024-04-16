@@ -12,7 +12,6 @@ class FeedbackModalViewModel: ObservableObject {
     @Published var dismissFeedback = false
 
     func dismiss() {
-        // Perform any necessary actions before dismissing the modal
         dismissFeedback = true
     }
 }

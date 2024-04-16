@@ -22,7 +22,7 @@ struct ForgotPasswordView: View {
                 Image("forgotPassword")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 400)
+                    .frame(height: 350)
                     .clipped()
             }
             .frame(maxWidth: .infinity)
@@ -55,19 +55,17 @@ struct ForgotPasswordView: View {
                     }
                     .sheet(isPresented: $isShowingFeedback) {
                         FeedbackModalView(viewModel: feedbackViewModel)
-                            //.frame(height: 500)
-                          //  .cornerRadius(16)
                     }
                     .onReceive(feedbackViewModel.$dismissFeedback) { shouldDismiss in
                         if shouldDismiss {
                             isShowingFeedback = false
                         }
                     }
-                    .padding(.horizontal)
+                  //    .padding(.horizontal)
                 }
-                .padding(.horizontal)
+                 //   .padding(.horizontal)
             }
-            .padding()
+            .padding(.horizontal)
             .navigationBarHidden(false)
         }
     }
