@@ -1,4 +1,4 @@
-# Having a decoupled iOS Application on a very simple feature
+# Having a iOS Application on a very simple feature
 
 **Xcode version:** 15.2
 
