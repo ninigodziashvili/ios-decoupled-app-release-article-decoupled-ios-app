@@ -11,8 +11,8 @@ import SwiftUI
 struct ForgotPasswordView: View {
     @StateObject private var viewModel = ForgotPasswordViewModel()
     @StateObject private var forgorPasswordViewModel = ForgotPasswordViewModel()
-    @State private var isShowingFeedback = false
     @StateObject private var feedbackViewModel = FeedbackModalViewModel()
+    @State private var isShowingFeedback = false
     
     // Mark: Body
     
@@ -61,9 +61,7 @@ struct ForgotPasswordView: View {
                             isShowingFeedback = false
                         }
                     }
-                  //    .padding(.horizontal)
                 }
-                 //   .padding(.horizontal)
             }
             .padding(.horizontal)
             .navigationBarHidden(false)
