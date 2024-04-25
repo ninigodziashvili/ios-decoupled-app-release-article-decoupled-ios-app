@@ -12,6 +12,8 @@ import Lottie
 struct FeedbackModalView: View {
     @ObservedObject var viewModel = FeedbackModalViewModel()
     
+    // Mark: Body
+    
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 10) {
@@ -23,7 +25,6 @@ struct FeedbackModalView: View {
                 Text(viewModel.message)
                     .font(.system(size: 16))
                     .padding()
-                
                 Button(action: {
                     viewModel.dismiss()
                 }) {

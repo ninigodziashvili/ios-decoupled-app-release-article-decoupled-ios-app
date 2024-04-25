@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     @StateObject private var viewModel = ForgotPasswordViewModel()
-    @StateObject private var forgorPasswordViewModel = ForgotPasswordViewModel()
     @StateObject private var feedbackViewModel = FeedbackModalViewModel()
     @State private var isShowingFeedback = false
     
