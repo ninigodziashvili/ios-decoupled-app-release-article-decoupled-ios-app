@@ -1,6 +1,6 @@
 import Foundation
 
-class DonationSwiftUIViewModel: ObservableObject {
+class DonationDataViewModel: ObservableObject {
     // MARK: - Properties
     
     private let repository: DonationRepositoryProtocol
