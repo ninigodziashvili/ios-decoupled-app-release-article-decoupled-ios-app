@@ -37,8 +37,6 @@
 		AC0AD023287A2C7F00469864 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD022287A2C7F00469864 /* Person.swift */; };
 		AC0AD028287A328B00469864 /* DonationEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD027287A328B00469864 /* DonationEnvironment.swift */; };
 		AC0AD02A287A32C700469864 /* PersonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD029287A32C700469864 /* PersonAPI.swift */; };
-		AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6102287A1773006AEFD0 /* AppDelegate.swift */; };
-		AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */; };
 		AC0B610C287A1776006AEFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0B610B287A1776006AEFD0 /* Assets.xcassets */; };
 		AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6118287A1819006AEFD0 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
@@ -75,8 +73,6 @@
 		AC0AD027287A328B00469864 /* DonationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationEnvironment.swift; sourceTree = "<group>"; };
 		AC0AD029287A32C700469864 /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
 		AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplingNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC0B6102287A1773006AEFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AC0B610B287A1776006AEFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC0B6110287A1776006AEFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0B6118287A1819006AEFD0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -148,8 +144,6 @@
 		4C6555892B038969003A26F0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B6102287A1773006AEFD0 /* AppDelegate.swift */,
-				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
 				4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */,
 				4C2C194C2B0D17C600C8CF35 /* Constants.swift */,
 			);
@@ -345,7 +339,6 @@
 			files = (
 				AC0AD017287A1DA100469864 /* DonationError.swift in Sources */,
 				4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */,
-				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				40DE76162BB4309400CD0012 /* FeedbackModalViewModel.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* Person.swift in Sources */,
@@ -369,7 +362,6 @@
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				4CE1B07B2B1F648D007EA7E8 /* LoginView.swift in Sources */,
-				AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */,
 				4C9F110D2B39BFBB001DB46D /* SkeletonListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
