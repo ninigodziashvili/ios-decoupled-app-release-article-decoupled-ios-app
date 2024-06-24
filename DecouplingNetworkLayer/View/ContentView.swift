@@ -38,8 +38,6 @@ struct ContentView: View {
                 }
                 .navigationTitle(Constants.TitleData.donorNames)
                 .listStyle(PlainListStyle())
-            } else {
-                SkeletonListView()
             }
         }
         .onAppear {

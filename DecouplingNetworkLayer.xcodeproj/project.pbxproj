@@ -20,11 +20,9 @@
 		4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558B2B0396AA003A26F0 /* ContentView.swift */; };
 		4C65558E2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */; };
 		4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */; };
-		4C9A5E122B23278000C2E606 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A5E142B23278000C2E606 /* Login.strings */; };
 		4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */; };
 		4C9F07272B2B1A1700B0EAE4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */; };
 		4C9F07292B2B1A5500B0EAE4 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */; };
-		4C9F110D2B39BFBB001DB46D /* SkeletonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F110C2B39BFBB001DB46D /* SkeletonListView.swift */; };
 		4CE1B0732B1F5F6A007EA7E8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE1B0722B1F5F6A007EA7E8 /* Lottie */; };
 		4CE1B0752B1F62C9007EA7E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B0742B1F62C9007EA7E8 /* UserRepository.swift */; };
 		4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE1B0762B1F63A7007EA7E8 /* LoginViewModel.swift */; };
@@ -55,12 +53,9 @@
 		4C65558B2B0396AA003A26F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSwiftUIViewModel.swift; sourceTree = "<group>"; };
 		4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplingNetworkLayerApp.swift; sourceTree = "<group>"; };
-		4C9A5E132B23278000C2E606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
-		4C9F07232B2B127300B0EAE4 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/Login.strings; sourceTree = "<group>"; };
 		4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsView.swift; sourceTree = "<group>"; };
 		4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
-		4C9F110C2B39BFBB001DB46D /* SkeletonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonListView.swift; sourceTree = "<group>"; };
 		4CE1B0742B1F62C9007EA7E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4CE1B0762B1F63A7007EA7E8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4CE1B07A2B1F648D007EA7E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 				4000A6B02BB223C60087846C /* ForgotPasswordView */,
 				4C9A5E0F2B2326CB00C2E606 /* LoginView */,
 				4C65558B2B0396AA003A26F0 /* ContentView.swift */,
-				4C9F110C2B39BFBB001DB46D /* SkeletonListView.swift */,
 				4C5D49382B20B1ED002C1B4E /* LottieView.swift */,
 			);
 			path = View;
@@ -158,7 +152,6 @@
 				4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */,
 				4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */,
 				4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */,
-				4C9A5E142B23278000C2E606 /* Login.strings */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -325,7 +318,6 @@
 				40DE761C2BB591C700CD0012 /* successAnimation.json in Resources */,
 				4C5CDEA22B10C2B000BA42F0 /* personsJsonData.json in Resources */,
 				AC0B610C287A1776006AEFD0 /* Assets.xcassets in Resources */,
-				4C9A5E122B23278000C2E606 /* Login.strings in Resources */,
 				4C5D49372B20AAE7002C1B4E /* loginAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,23 +354,10 @@
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				4CE1B07B2B1F648D007EA7E8 /* LoginView.swift in Sources */,
-				4C9F110D2B39BFBB001DB46D /* SkeletonListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4C9A5E142B23278000C2E606 /* Login.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C9A5E132B23278000C2E606 /* en */,
-				4C9F07232B2B127300B0EAE4 /* ka */,
-			);
-			name = Login.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC0B6111287A1776006AEFD0 /* Debug */ = {
