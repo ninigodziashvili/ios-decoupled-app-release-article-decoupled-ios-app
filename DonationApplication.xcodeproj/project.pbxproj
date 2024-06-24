@@ -19,7 +19,7 @@
 		4C5D49392B20B1ED002C1B4E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D49382B20B1ED002C1B4E /* LottieView.swift */; };
 		4C65558C2B0396AA003A26F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558B2B0396AA003A26F0 /* ContentView.swift */; };
 		4C65558E2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */; };
-		4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */; };
+		4C6555902B039708003A26F0 /* DonationApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65558F2B039708003A26F0 /* DonationApplication.swift */; };
 		4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */; };
 		4C9F07272B2B1A1700B0EAE4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */; };
 		4C9F07292B2B1A5500B0EAE4 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */; };
@@ -52,7 +52,7 @@
 		4C5D49382B20B1ED002C1B4E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		4C65558B2B0396AA003A26F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C65558D2B0396E2003A26F0 /* DonationSwiftUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSwiftUIViewModel.swift; sourceTree = "<group>"; };
-		4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplingNetworkLayerApp.swift; sourceTree = "<group>"; };
+		4C65558F2B039708003A26F0 /* DonationApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationApplication.swift; sourceTree = "<group>"; };
 		4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldsView.swift; sourceTree = "<group>"; };
 		4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		AC0AD022287A2C7F00469864 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AC0AD027287A328B00469864 /* DonationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationEnvironment.swift; sourceTree = "<group>"; };
 		AC0AD029287A32C700469864 /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
-		AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplingNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0B60FF287A1773006AEFD0 /* DonationApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonationApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B610B287A1776006AEFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC0B6110287A1776006AEFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0B6118287A1819006AEFD0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		4C6555892B038969003A26F0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				4C65558F2B039708003A26F0 /* DecouplingNetworkLayerApp.swift */,
+				4C65558F2B039708003A26F0 /* DonationApplication.swift */,
 				4C2C194C2B0D17C600C8CF35 /* Constants.swift */,
 			);
 			path = Application;
@@ -159,8 +159,6 @@
 		AC0AD011287A1BEF00469864 /* DonationApp */ = {
 			isa = PBXGroup;
 			children = (
-				AC0AD024287A324A00469864 /* API */,
-				AC0AD015287A1D9100469864 /* Errors */,
 				AC0AD014287A1D7F00469864 /* Model */,
 				4C6555862B038933003A26F0 /* Repository */,
 			);
@@ -181,12 +179,15 @@
 			children = (
 				AC0AD016287A1DA100469864 /* DonationError.swift */,
 			);
-			path = Errors;
+			name = Errors;
+			path = ../DonationApp/Errors;
 			sourceTree = "<group>";
 		};
 		AC0AD01A287A1E2A00469864 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				AC0AD024287A324A00469864 /* API */,
+				AC0AD015287A1D9100469864 /* Errors */,
 				AC0AD01B287A1E3700469864 /* URLSessionHTTPClient */,
 				AC0B6116287A1800006AEFD0 /* HTTPClient */,
 			);
@@ -214,7 +215,7 @@
 		AC0B60F6287A1773006AEFD0 = {
 			isa = PBXGroup;
 			children = (
-				AC0B6101287A1773006AEFD0 /* DecouplingNetworkLayer */,
+				AC0B6101287A1773006AEFD0 /* DonationApplication */,
 				AC0B6100287A1773006AEFD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,12 +223,12 @@
 		AC0B6100287A1773006AEFD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */,
+				AC0B60FF287A1773006AEFD0 /* DonationApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC0B6101287A1773006AEFD0 /* DecouplingNetworkLayer */ = {
+		AC0B6101287A1773006AEFD0 /* DonationApplication */ = {
 			isa = PBXGroup;
 			children = (
 				AC0B610B287A1776006AEFD0 /* Assets.xcassets */,
@@ -239,7 +240,7 @@
 				4C6555882B038956003A26F0 /* View */,
 				AC0AD01A287A1E2A00469864 /* Networking */,
 			);
-			path = DecouplingNetworkLayer;
+			path = DonationApplication;
 			sourceTree = "<group>";
 		};
 		AC0B6116287A1800006AEFD0 /* HTTPClient */ = {
@@ -253,9 +254,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC0B60FE287A1773006AEFD0 /* DecouplingNetworkLayer */ = {
+		AC0B60FE287A1773006AEFD0 /* DonationApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC0B6113287A1776006AEFD0 /* Build configuration list for PBXNativeTarget "DecouplingNetworkLayer" */;
+			buildConfigurationList = AC0B6113287A1776006AEFD0 /* Build configuration list for PBXNativeTarget "DonationApplication" */;
 			buildPhases = (
 				AC0B60FB287A1773006AEFD0 /* Sources */,
 				AC0B60FC287A1773006AEFD0 /* Frameworks */,
@@ -265,12 +266,12 @@
 			);
 			dependencies = (
 			);
-			name = DecouplingNetworkLayer;
+			name = DonationApplication;
 			packageProductDependencies = (
 				4CE1B0722B1F5F6A007EA7E8 /* Lottie */,
 			);
 			productName = DecouplingNetworkLayer;
-			productReference = AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */;
+			productReference = AC0B60FF287A1773006AEFD0 /* DonationApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -288,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC0B60FA287A1773006AEFD0 /* Build configuration list for PBXProject "DecouplingNetworkLayer" */;
+			buildConfigurationList = AC0B60FA287A1773006AEFD0 /* Build configuration list for PBXProject "DonationApplication" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,7 +306,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC0B60FE287A1773006AEFD0 /* DecouplingNetworkLayer */,
+				AC0B60FE287A1773006AEFD0 /* DonationApplication */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +350,7 @@
 				4C5D49392B20B1ED002C1B4E /* LottieView.swift in Sources */,
 				AC0AD028287A328B00469864 /* DonationEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DonationData.swift in Sources */,
-				4C6555902B039708003A26F0 /* DecouplingNetworkLayerApp.swift in Sources */,
+				4C6555902B039708003A26F0 /* DonationApplication.swift in Sources */,
 				4C9F07292B2B1A5500B0EAE4 /* LoginButtonView.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
@@ -484,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DecouplingNetworkLayer/Info.plist;
+				INFOPLIST_FILE = DonationApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -510,7 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DecouplingNetworkLayer/Info.plist;
+				INFOPLIST_FILE = DonationApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -531,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC0B60FA287A1773006AEFD0 /* Build configuration list for PBXProject "DecouplingNetworkLayer" */ = {
+		AC0B60FA287A1773006AEFD0 /* Build configuration list for PBXProject "DonationApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC0B6111287A1776006AEFD0 /* Debug */,
@@ -540,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC0B6113287A1776006AEFD0 /* Build configuration list for PBXNativeTarget "DecouplingNetworkLayer" */ = {
+		AC0B6113287A1776006AEFD0 /* Build configuration list for PBXNativeTarget "DonationApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC0B6114287A1776006AEFD0 /* Debug */,

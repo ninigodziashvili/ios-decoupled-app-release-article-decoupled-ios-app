@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct DecouplingNetworkLayer: App {
+struct DonationApplication: App {
     var body: some Scene {
         WindowGroup {
            LoginView()
