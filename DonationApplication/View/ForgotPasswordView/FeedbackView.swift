@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 import Lottie
 
-struct FeedbackModalView: View {
-    @ObservedObject var viewModel = FeedbackModalViewModel()
+struct FeedbackView: View {
+    @ObservedObject var viewModel = FeedbackDataViewModel()
     
     var body: some View {
         GeometryReader { geometry in
@@ -42,6 +42,6 @@ struct FeedbackModalView: View {
 
 struct FeedbackModalView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackModalView()
+        FeedbackView()
     }
 }

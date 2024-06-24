@@ -1,7 +1,7 @@
 import Foundation
 
 protocol DonationRepositoryProtocol {
-    typealias DonationResult = Result<DonationData, DonationError>
+    typealias DonationResult = Result<DonationData, DonationDataError>
     
     func getPersons(handler: @escaping (DonationResult) -> Void)
     func getPersonsLocalData(handler: @escaping (DonationResult) -> Void)

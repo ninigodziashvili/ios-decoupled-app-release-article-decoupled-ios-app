@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct ContentView: View {
+struct DonorsMainListView: View {
     // MARK: - Private Properties
     
-    @StateObject private var viewModel = DonationSwiftUIViewModel(repository: DonationRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
+    @StateObject private var viewModel = DonationDataViewModel(repository: DonationRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
     @State private var selectedFilter = 0
     
     // MARK: - Body
@@ -48,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DonorsMainListView()
     }
 }

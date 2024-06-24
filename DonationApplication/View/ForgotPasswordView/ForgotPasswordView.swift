@@ -11,7 +11,7 @@ import SwiftUI
 struct ForgotPasswordView: View {
     @StateObject private var viewModel = ForgotPasswordViewModel()
     @StateObject private var forgorPasswordViewModel = ForgotPasswordViewModel()
-    @StateObject private var feedbackViewModel = FeedbackModalViewModel()
+    @StateObject private var feedbackViewModel = FeedbackDataViewModel()
     @State private var isShowingFeedback = false
     
     // Mark: Body
@@ -54,7 +54,7 @@ struct ForgotPasswordView: View {
                             .cornerRadius(10)
                     }
                     .sheet(isPresented: $isShowingFeedback) {
-                        FeedbackModalView(viewModel: feedbackViewModel)
+                        FeedbackView(viewModel: feedbackViewModel)
                     }
                     .onReceive(feedbackViewModel.$dismissFeedback) { shouldDismiss in
                         if shouldDismiss {

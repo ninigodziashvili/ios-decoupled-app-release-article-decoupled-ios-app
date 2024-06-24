@@ -25,7 +25,7 @@ fileprivate extension PersonAPI {
 extension PersonAPI {
     static var dev: Self {
         PersonAPI(
-            environment: DonationEnvironment()
+            environment: DonationDataEnvironment()
         )
     }
 }
