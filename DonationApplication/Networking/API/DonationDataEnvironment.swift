@@ -6,6 +6,6 @@ protocol Environment {
     var baseURL: String { get }
 }
 
-struct DonationEnvironment: Environment {
+struct DonationDataEnvironment: Environment {
     let baseURL: String = "https://jsonplaceholder.typicode.com/"
 }

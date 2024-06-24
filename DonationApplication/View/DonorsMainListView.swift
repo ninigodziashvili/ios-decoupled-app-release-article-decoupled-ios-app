@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct DonorsMainListView: View {
     // MARK: - Private Properties
     
     @StateObject private var viewModel = DonationDataViewModel(repository: DonationRemoteRepository(httpClient: URLSessionHTTPClient(), api: .dev))
@@ -48,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DonorsMainListView()
     }
 }

@@ -32,7 +32,7 @@ struct LoginView: View {
                     viewModel.login()
                 }
                 .background(
-                    NavigationLink(destination: ContentView(), isActive: $viewModel.navigateToListPage) {
+                    NavigationLink(destination: DonorsMainListView(), isActive: $viewModel.navigateToListPage) {
                         EmptyView()
                     }
                 )

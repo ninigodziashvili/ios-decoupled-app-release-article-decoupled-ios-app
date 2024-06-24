@@ -1,6 +1,6 @@
 import Foundation
 
-enum DonationError: Error {
+enum DonationDataError: Error {
     case notParsable(Data)
     case fetchError(Error)
     case statement(String)
