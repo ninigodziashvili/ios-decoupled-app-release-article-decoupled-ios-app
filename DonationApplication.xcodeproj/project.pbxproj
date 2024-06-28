@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4000A6AF2BAF2CD30087846C /* ForgotPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */; };
+		4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */; };
 		4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */; };
 		4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B32BB22A350087846C /* ForgotPasswordView.swift */; };
 		40DE76162BB4309400CD0012 /* FeedbackDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordButton.swift; sourceTree = "<group>"; };
+		4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordButtonView.swift; sourceTree = "<group>"; };
 		4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		4000A6B32BB22A350087846C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDataViewModel.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				4CE1B07A2B1F648D007EA7E8 /* LoginView.swift */,
 				4C9F07282B2B1A5500B0EAE4 /* LoginButtonView.swift */,
 				4C9F07242B2B19B700B0EAE4 /* InputFieldsView.swift */,
-				4000A6AE2BAF2CD30087846C /* ForgotPasswordButton.swift */,
+				4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 				AC0AD021287A2BBD00469864 /* DonationRemoteRepository.swift in Sources */,
 				4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */,
 				4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */,
-				4000A6AF2BAF2CD30087846C /* ForgotPasswordButton.swift in Sources */,
+				4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */,
 				AC0AD02A287A32C700469864 /* PersonAPI.swift in Sources */,
 				4C65558E2B0396E2003A26F0 /* DonationDataViewModel.swift in Sources */,
 				4C5D49392B20B1ED002C1B4E /* LottieView.swift in Sources */,

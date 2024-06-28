@@ -16,16 +16,19 @@ struct LoginView: View {
                     .padding()
                 InputFieldsView(viewModel: viewModel)
                 NavigationLink(destination: ForgotPasswordView(), isActive: $viewModel.isTappedForgotPassword) {
-                    ForgotPasswordButton(viewModel: viewModel) {
+                    ForgotPasswordButtonView(viewModel: viewModel) {
                         viewModel.isTappedForgotPassword = true
                     }
                 }
                 Spacer()
-                if viewModel.validationError {
-                    Text("Please enter Username and Password")
+                if let error = viewModel.errorMessage {
+                    ErrorView(error: error)
                         .foregroundColor(.red)
                         .font(.system(size: 14))
-                        .padding(.bottom, 13)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, -45)
                 }
                 Spacer()
                 LoginButtonView(viewModel: viewModel) {

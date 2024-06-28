@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct ForgotPasswordButton: View {
+struct ForgotPasswordButtonView: View {
     @ObservedObject var viewModel: LoginViewModel
     var action: () -> Void
     

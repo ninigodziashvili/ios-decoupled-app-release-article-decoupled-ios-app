@@ -9,6 +9,5 @@ import Foundation
 
 struct ErrorMessage: Identifiable {
     var id = UUID()
-    var title: String
     var message: String
 }
