@@ -4,7 +4,9 @@ import SwiftUI
 struct LoginView: View {
     // MARK: - Private Properties
     
-    @StateObject private var viewModel = LoginViewModel()
+    @EnvironmentObject private var loginViewModel: LoginViewModel
+    @EnvironmentObject private var forgotPasswordViewModel: ForgotPasswordViewModel
+    @EnvironmentObject private var feedbackDataViewModel: FeedbackDataViewModel
     
     // MARK: - Body
     
@@ -14,14 +16,14 @@ struct LoginView: View {
                 LottieView(animationName: "loginAnimation")
                     .frame(height: 450)
                     .padding()
-                InputFieldsView(viewModel: viewModel)
-                NavigationLink(destination: ForgotPasswordView(), isActive: $viewModel.isTappedForgotPassword) {
-                    ForgotPasswordButtonView(viewModel: viewModel) {
-                        viewModel.isTappedForgotPassword = true
+                InputFieldsView(viewModel: loginViewModel)
+                NavigationLink(destination: ForgotPasswordView(), isActive: $loginViewModel.isTappedForgotPassword) {
+                    ForgotPasswordButtonView(viewModel: loginViewModel) {
+                        loginViewModel.isTappedForgotPassword = true
                     }
                 }
                 Spacer()
-                if let error = viewModel.errorMessage {
+                if let error = loginViewModel.errorMessage {
                     ErrorView(error: error)
                         .foregroundColor(.red)
                         .font(.system(size: 14))
@@ -31,15 +33,15 @@ struct LoginView: View {
                         .padding(.top, -45)
                 }
                 Spacer()
-                LoginButtonView(viewModel: viewModel) {
-                    viewModel.login()
+                LoginButtonView(viewModel: loginViewModel) {
+                    loginViewModel.login()
                 }
                 .background(
-                    NavigationLink(destination: DonorsMainListView(), isActive: $viewModel.navigateToListPage) {
+                    NavigationLink(destination: DonorsMainListView(), isActive: $loginViewModel.navigateToListPage) {
                         EmptyView()
                     }
                 )
-                if viewModel.isLoggingIn {
+                if loginViewModel.isLoggingIn {
                     ProgressView()
                         .padding()
                 }
@@ -52,6 +54,9 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .environmentObject(LoginViewModel())
+            .environmentObject(ForgotPasswordViewModel())
+            .environmentObject(FeedbackDataViewModel())
     }
 }
 

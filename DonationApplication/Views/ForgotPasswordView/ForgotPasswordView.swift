@@ -9,12 +9,14 @@ import Foundation
 import SwiftUI
 
 struct ForgotPasswordView: View {
-    @StateObject private var viewModel = ForgotPasswordViewModel()
-    @StateObject private var forgorPasswordViewModel = ForgotPasswordViewModel()
-    @StateObject private var feedbackViewModel = FeedbackDataViewModel()
+    // MARK: - Private Properties
+    
+    @EnvironmentObject private var forgotPasswordViewModel: ForgotPasswordViewModel
+    @EnvironmentObject private var feedbackViewModel: FeedbackDataViewModel
+    
     @State private var isShowingFeedback = false
     
-    // Mark: Body
+    // MARK: - Body
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -26,7 +28,7 @@ struct ForgotPasswordView: View {
                     .clipped()
             }
             .frame(maxWidth: .infinity)
-            VStack(alignment: .leading , spacing: 20) {
+            VStack(alignment: .leading, spacing: 20) {
                 VStack(alignment: .leading, spacing: 30) {
                     Text("Forgot Password")
                         .font(.largeTitle)
@@ -40,10 +42,10 @@ struct ForgotPasswordView: View {
                 }
                 .hidden()
                 VStack(spacing: 80) {
-                    TextField("Email", text: $viewModel.email)
+                    TextField("Email", text: $forgotPasswordViewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action: {
-                        viewModel.resetPassword()
+                        forgotPasswordViewModel.resetPassword()
                         isShowingFeedback = true
                     }) {
                         Text("Continue")
@@ -54,7 +56,8 @@ struct ForgotPasswordView: View {
                             .cornerRadius(10)
                     }
                     .sheet(isPresented: $isShowingFeedback) {
-                        FeedbackView(viewModel: feedbackViewModel)
+                        FeedbackView()
+                            .environmentObject(feedbackViewModel)
                     }
                     .onReceive(feedbackViewModel.$dismissFeedback) { shouldDismiss in
                         if shouldDismiss {
@@ -72,5 +75,8 @@ struct ForgotPasswordView: View {
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {
         ForgotPasswordView()
+            .environmentObject(LoginViewModel())
+            .environmentObject(ForgotPasswordViewModel())
+            .environmentObject(FeedbackDataViewModel())
     }
 }
