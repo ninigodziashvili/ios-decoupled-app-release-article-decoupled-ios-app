@@ -16,7 +16,7 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
     @Published var isLoggingIn = false
     @Published var authenticationFailed = false
     @Published var navigateToListPage = false
-    @Published var validationError = false
+    @Published var errorMessage: ErrorMessage?
     @Published var isTappedForgotPassword = false
     
     func login() {
@@ -28,7 +28,7 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
                 if success {
                     self?.navigateListPage()
                 } else {
-                    self?.authenticationFailed = true
+                    self?.errorMessage = ErrorMessage(message: "Authentication failed. Please try again.")
                 }
             }
         }
@@ -50,7 +50,9 @@ class LoginViewModel: ObservableObject, NoavigationProtocol {
     
     private func validationInput() -> Bool {
         let isValid = !username.isEmpty && !password.isEmpty
-        validationError = !isValid
+        if !isValid {
+            errorMessage = ErrorMessage(message: "Please enter Username and Password")
+        }
         return isValid
     }
 }
