@@ -22,22 +22,17 @@ struct DonorsMainListView: View {
                 List {
                     ForEach(viewModel.filteredPersons(from: donationData.persons, by: selectedFilter), id: \.id) { person in
                         if let name = person.name, let group = person.bloodyGroup {
-                            HStack {
-                                Text(name)
-                                Spacer()
-                                Image(systemName: "drop.fill")
-                                    .foregroundColor(.red)
-                                if Constants.FilterData.allFilters[selectedFilter] ==  Constants.FilterData.all {
-                                    Text(group.rawValue)
-                                        .font(.system(size: 15))
-                                }
-                            }
-                            .padding()
+                            DonorCellView(
+                                name: name,
+                                group: group.rawValue,
+                                showGroup: Constants.FilterData.allFilters[selectedFilter] == Constants.FilterData.all
+                            )
                         }
                     }
                 }
                 .navigationTitle(Constants.TitleData.donorNames)
                 .listStyle(PlainListStyle())
+                .background(Color(UIColor.systemGroupedBackground))
             }
         }
         .onAppear {
