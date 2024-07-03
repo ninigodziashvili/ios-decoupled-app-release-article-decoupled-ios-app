@@ -10,6 +10,7 @@
 		4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */; };
 		4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */; };
 		4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B32BB22A350087846C /* ForgotPasswordView.swift */; };
+		40CFF33F2C35D4E800424963 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFF33E2C35D4E800424963 /* ContentView.swift */; };
 		40DE76162BB4309400CD0012 /* FeedbackDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */; };
 		40DE76182BB4310200CD0012 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76172BB4310200CD0012 /* FeedbackView.swift */; };
 		40DE761C2BB591C700CD0012 /* successAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 40DE761B2BB591C700CD0012 /* successAnimation.json */; };
@@ -45,6 +46,7 @@
 		4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordButtonView.swift; sourceTree = "<group>"; };
 		4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		4000A6B32BB22A350087846C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		40CFF33E2C35D4E800424963 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDataViewModel.swift; sourceTree = "<group>"; };
 		40DE76172BB4310200CD0012 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		40DE761B2BB591C700CD0012 /* successAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = successAnimation.json; path = ../../../../.Trash/successAnimation.json; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				4C65558F2B039708003A26F0 /* DonationApplication.swift */,
 				4C2C194C2B0D17C600C8CF35 /* Constants.swift */,
+				40CFF33E2C35D4E800424963 /* ContentView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				AC0AD017287A1DA100469864 /* DonationDataError.swift in Sources */,
 				4C65558C2B0396AA003A26F0 /* DonorsMainListView.swift in Sources */,
+				40CFF33F2C35D4E800424963 /* ContentView.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				40DE76162BB4309400CD0012 /* FeedbackDataViewModel.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* Person.swift in Sources */,

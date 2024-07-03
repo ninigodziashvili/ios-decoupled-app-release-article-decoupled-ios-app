@@ -10,7 +10,9 @@ import SwiftUI
 import Lottie
 
 struct FeedbackView: View {
-    @ObservedObject var viewModel = FeedbackDataViewModel()
+    // MARK: - Private Properties
+    
+    @EnvironmentObject private var feedbackDataViewModel: FeedbackDataViewModel
     
     var body: some View {
         GeometryReader { geometry in
@@ -20,12 +22,12 @@ struct FeedbackView: View {
                     .scaleEffect(0.5)
                     .aspectRatio(contentMode: .fill)
                     .padding()
-                Text(viewModel.message)
+                Text(feedbackDataViewModel.message)
                     .font(.system(size: 16))
                     .padding()
                 
                 Button(action: {
-                    viewModel.dismiss()
+                    feedbackDataViewModel.dismiss()
                 }) {
                     Text("Done")
                         .padding()
@@ -42,6 +44,6 @@ struct FeedbackView: View {
 
 struct FeedbackModalView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedbackView()
+        FeedbackView().environmentObject(FeedbackDataViewModel())
     }
 }
