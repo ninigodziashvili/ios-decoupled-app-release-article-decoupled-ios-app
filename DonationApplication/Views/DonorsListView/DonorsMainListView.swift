@@ -17,6 +17,7 @@ struct DonorsMainListView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
+            CustomBackButton()
             
             if let donationData = viewModel.donationData {
                 List {

@@ -10,6 +10,8 @@
 		4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */; };
 		4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */; };
 		4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B32BB22A350087846C /* ForgotPasswordView.swift */; };
+		40475D592C41A5A5005D6510 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40475D582C41A5A5005D6510 /* Router.swift */; };
+		40475D5B2C4AC673005D6510 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40475D5A2C4AC673005D6510 /* CustomBackButton.swift */; };
 		40CFF33F2C35D4E800424963 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFF33E2C35D4E800424963 /* ContentView.swift */; };
 		40DE76162BB4309400CD0012 /* FeedbackDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */; };
 		40DE76182BB4310200CD0012 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76172BB4310200CD0012 /* FeedbackView.swift */; };
@@ -46,6 +48,8 @@
 		4000A6AE2BAF2CD30087846C /* ForgotPasswordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordButtonView.swift; sourceTree = "<group>"; };
 		4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		4000A6B32BB22A350087846C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		40475D582C41A5A5005D6510 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		40475D5A2C4AC673005D6510 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		40CFF33E2C35D4E800424963 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDataViewModel.swift; sourceTree = "<group>"; };
 		40DE76172BB4310200CD0012 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -119,8 +123,10 @@
 		40FE2C652C2C41DB002F7B5D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				40475D5A2C4AC673005D6510 /* CustomBackButton.swift */,
 				4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */,
 				40FE2C6A2C355345002F7B5D /* DonorCellView.swift */,
+				40475D582C41A5A5005D6510 /* Router.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -370,12 +376,14 @@
 				40DE76182BB4310200CD0012 /* FeedbackView.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DonationRemoteRepository.swift in Sources */,
 				4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */,
+				40475D5B2C4AC673005D6510 /* CustomBackButton.swift in Sources */,
 				4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */,
 				40FE2C6B2C355345002F7B5D /* DonorCellView.swift in Sources */,
 				4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */,
 				AC0AD02A287A32C700469864 /* PersonAPI.swift in Sources */,
 				4C65558E2B0396E2003A26F0 /* DonationDataViewModel.swift in Sources */,
 				4C5D49392B20B1ED002C1B4E /* LottieView.swift in Sources */,
+				40475D592C41A5A5005D6510 /* Router.swift in Sources */,
 				AC0AD028287A328B00469864 /* DonationDataEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DonationData.swift in Sources */,
 				4C6555902B039708003A26F0 /* DonationApplication.swift in Sources */,
