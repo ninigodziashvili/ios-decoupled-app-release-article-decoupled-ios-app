@@ -11,6 +11,7 @@
 		4000A6B22BB223FC0087846C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */; };
 		4000A6B42BB22A350087846C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000A6B32BB22A350087846C /* ForgotPasswordView.swift */; };
 		40475D592C41A5A5005D6510 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40475D582C41A5A5005D6510 /* Router.swift */; };
+		40475D5B2C4AC673005D6510 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40475D5A2C4AC673005D6510 /* CustomBackButton.swift */; };
 		40CFF33F2C35D4E800424963 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFF33E2C35D4E800424963 /* ContentView.swift */; };
 		40DE76162BB4309400CD0012 /* FeedbackDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */; };
 		40DE76182BB4310200CD0012 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE76172BB4310200CD0012 /* FeedbackView.swift */; };
@@ -48,6 +49,7 @@
 		4000A6B12BB223FC0087846C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		4000A6B32BB22A350087846C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		40475D582C41A5A5005D6510 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		40475D5A2C4AC673005D6510 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		40CFF33E2C35D4E800424963 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40DE76152BB4309400CD0012 /* FeedbackDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDataViewModel.swift; sourceTree = "<group>"; };
 		40DE76172BB4310200CD0012 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				4000A6B02BB223C60087846C /* ForgotPasswordView */,
 				40FE2C642C2C41C1002F7B5D /* DonorsListView */,
 				40FE2C632C2C41AF002F7B5D /* LottieView */,
+				40475D5A2C4AC673005D6510 /* CustomBackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				40DE76182BB4310200CD0012 /* FeedbackView.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DonationRemoteRepository.swift in Sources */,
 				4CE1B0772B1F63A7007EA7E8 /* LoginViewModel.swift in Sources */,
+				40475D5B2C4AC673005D6510 /* CustomBackButton.swift in Sources */,
 				4C9F07252B2B19B700B0EAE4 /* InputFieldsView.swift in Sources */,
 				40FE2C6B2C355345002F7B5D /* DonorCellView.swift in Sources */,
 				4000A6AF2BAF2CD30087846C /* ForgotPasswordButtonView.swift in Sources */,

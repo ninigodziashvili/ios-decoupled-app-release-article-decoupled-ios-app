@@ -7,6 +7,8 @@ struct LoginView: View {
     @EnvironmentObject private var loginViewModel: LoginViewModel
     @EnvironmentObject private var router: Router
     
+    private var errorMessage = ErrorMessage(message: "Please fill in all fields.")
+    
     // MARK: - Body
     
     var body: some View {
@@ -33,7 +35,7 @@ struct LoginView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, -45)
             } else if loginViewModel.isLoggingIn {
-                Text("Please fill in all fields.")
+                Text(errorMessage.message)
                     .foregroundColor(.red)
                     .font(.system(size: 14))
                     .padding(.vertical, 10)

@@ -21,6 +21,7 @@ struct ForgotPasswordView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             VStack {
+                CustomBackButton()
                 Image("forgotPassword")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
