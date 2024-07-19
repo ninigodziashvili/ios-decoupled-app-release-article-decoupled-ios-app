@@ -123,6 +123,7 @@
 		40FE2C652C2C41DB002F7B5D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				40475D5A2C4AC673005D6510 /* CustomBackButton.swift */,
 				4C9F07262B2B1A1700B0EAE4 /* ErrorView.swift */,
 				40FE2C6A2C355345002F7B5D /* DonorCellView.swift */,
 				40475D582C41A5A5005D6510 /* Router.swift */,
@@ -167,7 +168,6 @@
 				4000A6B02BB223C60087846C /* ForgotPasswordView */,
 				40FE2C642C2C41C1002F7B5D /* DonorsListView */,
 				40FE2C632C2C41AF002F7B5D /* LottieView */,
-				40475D5A2C4AC673005D6510 /* CustomBackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
