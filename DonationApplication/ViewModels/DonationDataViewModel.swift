@@ -7,6 +7,7 @@ class DonationDataViewModel: ObservableObject {
     
     @Published var donationData: DonationData? = .init(persons: [])
     @Published var errorMessage: String = ""
+    @Published var searchText: String = ""
     
     init(repository: DonationRepositoryProtocol) {
         self.repository = repository
@@ -24,12 +25,28 @@ class DonationDataViewModel: ObservableObject {
     }
     
     func filteredPersons(from persons: [Person], by selectedFilter: Int) -> [Person] {
-        if selectedFilter == 0 {
-            return persons
-        } else {
+        // Apply filter by selected filter
+        var filtered = persons
+        
+        if selectedFilter != 0 {
             let bloodGroup = Constants.FilterData.allFilters[selectedFilter]
-            return persons.filter { $0.bloodyGroup?.rawValue == bloodGroup }
+            filtered = filtered.filter { person in
+                person.bloodyGroup?.rawValue == bloodGroup
+            }
         }
+        
+        if !searchText.isEmpty {
+            filtered = filtered.filter { person in
+                let nameMatches = person.name?.localizedCaseInsensitiveContains(searchText) ?? false
+                let usernameMatches = person.username?.localizedCaseInsensitiveContains(searchText) ?? false
+                let emailMatches = person.email?.localizedCaseInsensitiveContains(searchText) ?? false
+                let phoneMatches = person.phone?.localizedCaseInsensitiveContains(searchText) ?? false
+                let websiteMatches = person.website?.localizedCaseInsensitiveContains(searchText) ?? false
+                return nameMatches || usernameMatches || emailMatches || phoneMatches || websiteMatches
+            }
+        }
+        
+        return filtered
     }
 }
 

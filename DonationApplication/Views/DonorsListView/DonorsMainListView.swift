@@ -11,12 +11,13 @@ struct DonorsMainListView: View {
     var body: some View {
         VStack {
             Picker(Constants.FilterData.filter, selection: $selectedFilter) {
-                ForEach(0..<5) { index in
+                ForEach(0..<Constants.FilterData.allFilters.count, id: \.self) { index in
                     Text(Constants.FilterData.allFilters[index]).tag(index)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
+            
             CustomBackButton()
             
             if let donationData = viewModel.donationData {
@@ -34,8 +35,12 @@ struct DonorsMainListView: View {
                 .navigationTitle(Constants.TitleData.donorNames)
                 .listStyle(PlainListStyle())
                 .background(Color(UIColor.systemGroupedBackground))
+            } else {
+                Text("No data available")
+                    .padding()
             }
         }
+        .searchable(text: $viewModel.searchText, prompt: "Search for donors")
         .onAppear {
             viewModel.fetchPersonsData()
         }
